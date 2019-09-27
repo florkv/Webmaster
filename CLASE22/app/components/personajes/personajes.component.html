@@ -1,0 +1,13 @@
+<div class="card-columns">
+
+  <div class="card mt-5" *ngFor="let personaje of personajes; let i = index" style="width: 18rem;">
+      <!-- [] -> comunicacion directa entre el controlador y la vista  -->
+    <img class="card-img-top" [src]="personaje.img" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{personaje.nombre}}</h5>
+        <p class="card-text">{{personaje.bio}}</p>
+        <button (click) = "verPersonaje(i)" class="btn btn-outline-success btn-block">Ver más</button>
+      </div>
+    </div>
+
+</div>
